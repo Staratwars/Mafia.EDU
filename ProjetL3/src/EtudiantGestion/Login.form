@@ -43,11 +43,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="119" max="-2" attributes="0"/>
+                          <Component id="ButtonInscr" min="-2" pref="119" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="ButtonCo" min="-2" pref="109" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" pref="92" max="-2" attributes="0"/>
+                          <Component id="ButtonAnnuler" min="-2" pref="92" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
@@ -87,9 +87,9 @@
                   </Group>
                   <EmptySpace pref="57" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="ButtonInscr" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="ButtonCo" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="ButtonAnnuler" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               </Group>
@@ -151,20 +151,20 @@
             <Property name="text" type="java.lang.String" value="Mot de passe"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="ButtonInscr">
           <Properties>
             <Property name="text" type="java.lang.String" value="INSCRIPTION"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="ButtonCo">
           <Properties>
             <Property name="text" type="java.lang.String" value="CONNEXION"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonCoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="ButtonAnnuler">
           <Properties>
             <Property name="text" type="java.lang.String" value="ANNULER"/>
           </Properties>
