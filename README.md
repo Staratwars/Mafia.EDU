@@ -27,7 +27,7 @@ UE sans prérequis : semestre pair
 Défini par numEtu, prénom, nom et inscrit à un parcours d’une mention
 Chaque étudiant aura un suivi de toute ses UE + Année correspondante à l’UE ( soit 2 variables UE/ANNEE) et si validé.
 
-**Objectif: **
+**Objectif:**
 
 Charger les données d’un CSV et l’envoyer sur la BD. CSV = { Mentions, parcours, UE, liste etudiants}
 Charger la BD avec un document depuis le PC.
@@ -35,7 +35,7 @@ Rôle d’utilisateur : directeur d’étude, secrétariat pédagogique, bureau 
 
 **Visualisation  :**
 
-Type:”Directeur d’étude”;  liste des étudiants, triables par mention et parcours.
+”Directeur d’étude”;  liste des étudiants, triables par mention et parcours.
 Pouvoir sélectionner un étudiant.
 Accessible:
 - les UE que l’étudiant a déjà validé 
@@ -46,9 +46,9 @@ Pouvoir filtrer par mention &parcours, voir les UE d’ouverture.
 
 **Inscriptions:**
 
-Type:”Secretariat Pedagogique”. Accès à la liste d’étudiant, la sélection d’un étudiant et affiche la liste des UE dont l’étudiant a les prérequis. Pouvoir filtrer & trier la liste.
+"Secretariat Pedagogique”. Accès à la liste d’étudiant, la sélection d’un étudiant et affiche la liste des UE dont l’étudiant a les prérequis. Pouvoir filtrer & trier la liste.
 **Saisie des résultats:**
-Type:”Bureau des examens”. Donne accès à la liste des UE triable et filtrable, sélectionner une UE donne la liste des étudiants inscrits, avec possibilité de cocher si l’UE est validée.
+"Bureau des examens”. Donne accès à la liste des UE triable et filtrable, sélectionner une UE donne la liste des étudiants inscrits, avec possibilité de cocher si l’UE est validée.
 
 
 
@@ -76,7 +76,6 @@ Programmes/logiciels/resources que nous avons utilisé pour développer notre pr
 * [SQL Connector Java ](https://dev.mysql.com/downloads/connector/j/) - Connexion entre le code et notre base de donnée.
 * [GIT & GITHUB](https://github.com/) - Travail collaboratif
 * [PHPMyAdmin](https://www.phpmyadmin.net/) - Base de donnée
-
 
 
 
