@@ -30,7 +30,7 @@ UE sans prérequis : semestre pair
 Défini par un numEtu, prenom, nom et inscrit à un parcours d’une mention
 Chaque étudiant aura un suivi de toute ses UE + Annee correspondante à l’UE ( soit 2 variables UE/ANNEE) et si validé 
 
-**Objectif: **
+**Objectif:**
 
 Charger les données d’un CSV et l’envoyer sur la BD. CSV = { Mentions, parcours, UE, liste etudiants}
 Charger la BD avec un document depuis le PC. (préciser le format)
