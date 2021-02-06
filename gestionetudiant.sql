@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 05 fév. 2021 à 23:11
+-- Généré le : sam. 06 fév. 2021 à 11:17
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.1
 
@@ -32,19 +32,16 @@ CREATE TABLE `utilisateur` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `motdepasse` varchar(255) NOT NULL,
-  `utype` varchar(255) NOT NULL
+  `utype` varchar(255) NOT NULL,
+  `Username` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `motdepasse`, `utype`) VALUES
-(1, 'a', 'aa', 'aa', 'Etudiant'),
-(2, 'scopel', 'gaetan', 'aa', 'Etudiant'),
-(3, 'benzema', 'karim', 'a', 'Scolarité'),
-(4, 'messi', 'neymar', 'a', 'Scolarité'),
-(5, 'noureddine', 'bekhdadi', 'aza', ' ');
+INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `motdepasse`, `utype`, `Username`) VALUES
+(8, 'noureddine', 'test', 'a', 'Etudiant', 'testnoureddine');
 
 --
 -- Index pour les tables déchargées
@@ -64,7 +61,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
