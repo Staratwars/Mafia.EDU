@@ -9,7 +9,7 @@ parcours et saisir les enseignement validés.
 
 ## Pour commencer
 
-Fonctionnalité :
+**Fonctionnalité :**
 
 Inscrire un étudiant à un enseignement
 voir parcours d’un étudiant 
@@ -17,14 +17,27 @@ ajouter enseignement validés
 
 1 annee universitaire : 2020-2021 avec 2 Semestre : pair (début) &impair (fin)
 
-Formations et UE :
+**Formations et UE :**
+
 1 formation : 1 mention & plusieurs parcours ( mention MIASHS parcours MIAGE)
 Chaque cours possède des UE lié à des mentions
 1 UE : crédits ECTS & codeUE
 Faire des prérequis : devoir faire algo pour faire poo par ex, vérifier si UE faite avant inscription à une autre UE
 UE sans prérequis : semestre pair
 
-Etudiant
+**Etudiant:**
+
+Défini par un numEtu, prenom, nom et inscrit à un parcours d’une mention
+Chaque étudiant aura un suivi de toute ses UE + Annee correspondante à l’UE ( soit 2 variables UE/ANNEE) et si validé 
+
+**Objectif: **
+
+Charger les données d’un CSV et l’envoyer sur la BD. CSV = { Mentions, parcours, UE, liste etudiants}
+Charger la BD avec un document depuis le PC. (préciser le format)
+Rôle d’utilisateur : directeur d’étude, secrétariat pédagogique, bureau des examens, étudiant
+Chaque utilisateur a ses propres fonctionnalitées.
+
+**Visualisation  :**
 
 
 ### Pré-requis
