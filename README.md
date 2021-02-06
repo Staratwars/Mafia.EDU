@@ -1,4 +1,4 @@
-#  ![alt text](http://url/to/img.png)  Mafia.EDU : Suivi des étudiants dans une formation à la carte. 
+#  ![](http://url/to/img.png)  Mafia.EDU : Suivi des étudiants dans une formation à la carte. 
 L3 Miage, projet de programmation
 
 
