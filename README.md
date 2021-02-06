@@ -64,8 +64,8 @@ Programmes/logiciels/resources que nous avons utilisé pour développer notre pr
 
 ## Versions
 
-**Dernière version stable :** 5.0
-**Dernière version :** 5.1
+**Dernière version stable :**
+**Dernière version :** 0.1
 
 Liste des versions : [Cliquer pour afficher](https://github.com/projetL3/tags)
 
