@@ -8,36 +8,48 @@ L’objet de l’application est de suivre les étudiants : les inscrire aux ens
 parcours et saisir les enseignement validés.
 
 ## Pour commencer
-
 **Fonctionnalité :**
-
 Inscrire un étudiant à un enseignement
 voir parcours d’un étudiant 
 ajouter enseignement validés
-
-1 annee universitaire : 2020-2021 avec 2 Semestre : pair (début) &impair (fin)
+1 année universitaire : 2020-2021 avec 2 Semestre : pair (début) & impair (fin)
 
 **Formations et UE :**
 
 1 formation : 1 mention & plusieurs parcours ( mention MIASHS parcours MIAGE)
 Chaque cours possède des UE lié à des mentions
 1 UE : crédits ECTS & codeUE
-Faire des prérequis : devoir faire algo pour faire poo par ex, vérifier si UE faite avant inscription à une autre UE
+Faire des prérequis.
 UE sans prérequis : semestre pair
 
 **Etudiant:**
 
-Défini par un numEtu, prenom, nom et inscrit à un parcours d’une mention
-Chaque étudiant aura un suivi de toute ses UE + Annee correspondante à l’UE ( soit 2 variables UE/ANNEE) et si validé 
+Défini par numEtu, prénom, nom et inscrit à un parcours d’une mention
+Chaque étudiant aura un suivi de toute ses UE + Année correspondante à l’UE ( soit 2 variables UE/ANNEE) et si validé.
 
-**Objectif:**
+**Objectif: **
 
 Charger les données d’un CSV et l’envoyer sur la BD. CSV = { Mentions, parcours, UE, liste etudiants}
-Charger la BD avec un document depuis le PC. (préciser le format)
+Charger la BD avec un document depuis le PC.
 Rôle d’utilisateur : directeur d’étude, secrétariat pédagogique, bureau des examens, étudiant
-Chaque utilisateur a ses propres fonctionnalitées.
 
 **Visualisation  :**
+
+Type:”Directeur d’étude”;  liste des étudiants, triables par mention et parcours.
+Pouvoir sélectionner un étudiant.
+Accessible:
+- les UE que l’étudiant a déjà validé 
+- les UE que l’étudiant suit actuellement (potentiellement vide en inter-semestre) 
+- les UE pour lesquels l’étudiant a les prérequis. C
+
+Pouvoir filtrer par mention &parcours, voir les UE d’ouverture.
+
+**Inscriptions:**
+
+Type:”Secretariat Pedagogique”. Accès à la liste d’étudiant, la sélection d’un étudiant et affiche la liste des UE dont l’étudiant a les prérequis. Pouvoir filtrer & trier la liste.
+**Saisie des résultats:**
+Type:”Bureau des examens”. Donne accès à la liste des UE triable et filtrable, sélectionner une UE donne la liste des étudiants inscrits, avec possibilité de cocher si l’UE est validée.
+
 
 
 ### Pré-requis
