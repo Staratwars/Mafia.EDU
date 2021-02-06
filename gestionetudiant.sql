@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 06 fév. 2021 à 13:49
+-- Généré le : sam. 06 fév. 2021 à 16:56
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.1
 
@@ -39,7 +39,34 @@ CREATE TABLE `cours` (
 --
 
 INSERT INTO `cours` (`idC`, `nomCours`, `duree`, `optionC`) VALUES
-(1, 'POO', 3, 'Semaine');
+(1, 'POO', 3, 'Semaine'),
+(2, 'Professionalisation', 6, 'Semaine');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `enregistrement`
+--
+
+CREATE TABLE `enregistrement` (
+  `idE` int(11) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `nic` varchar(255) NOT NULL,
+  `sexe` varchar(255) NOT NULL,
+  `cours` varchar(255) NOT NULL,
+  `groupe` varchar(255) NOT NULL,
+  `telephone` int(11) NOT NULL,
+  `adresse` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `enregistrement`
+--
+
+INSERT INTO `enregistrement` (`idE`, `prenom`, `nom`, `nic`, `sexe`, `cours`, `groupe`, `telephone`, `adresse`) VALUES
+(1, 'Gaetan', 'Hecarim', 'Gaetinho', 'Homme', 'POO', 'M1 MIAGE', 767144587, '4 rue du lac d\'eau'),
+(2, 'Noureddine', 'Bekhdadi', 'nbnueve', 'Homme', 'Professionalisation', 'L2 MIASHS MIAGE', 123456789, '9 rue du maréchal Scopel');
 
 -- --------------------------------------------------------
 
@@ -58,8 +85,9 @@ CREATE TABLE `groupe` (
 --
 
 INSERT INTO `groupe` (`idG`, `GNom`, `annee`) VALUES
-(1, 'L3 MIAGE', 2021),
-(2, 'M1 MIAGE', 2023);
+(2, 'M1 MIAGE', 2023),
+(3, 'L3MIAGE', 2021),
+(4, 'L2 MIASHS MIAGE', 2019);
 
 -- --------------------------------------------------------
 
@@ -95,6 +123,12 @@ ALTER TABLE `cours`
   ADD PRIMARY KEY (`idC`);
 
 --
+-- Index pour la table `enregistrement`
+--
+ALTER TABLE `enregistrement`
+  ADD PRIMARY KEY (`idE`);
+
+--
 -- Index pour la table `groupe`
 --
 ALTER TABLE `groupe`
@@ -114,13 +148,19 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `cours`
 --
 ALTER TABLE `cours`
-  MODIFY `idC` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idC` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `enregistrement`
+--
+ALTER TABLE `enregistrement`
+  MODIFY `idE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `groupe`
 --
 ALTER TABLE `groupe`
-  MODIFY `idG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
