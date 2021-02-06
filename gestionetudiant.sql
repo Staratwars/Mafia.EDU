@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 06 fév. 2021 à 16:56
+-- Généré le : sam. 06 fév. 2021 à 18:35
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.1
 
@@ -40,7 +40,8 @@ CREATE TABLE `cours` (
 
 INSERT INTO `cours` (`idC`, `nomCours`, `duree`, `optionC`) VALUES
 (1, 'POO', 3, 'Semaine'),
-(2, 'Professionalisation', 6, 'Semaine');
+(2, 'Professionalisation', 6, 'Semaine'),
+(3, 'anglais', 3, 'Mois');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,8 @@ CREATE TABLE `enregistrement` (
 
 INSERT INTO `enregistrement` (`idE`, `prenom`, `nom`, `nic`, `sexe`, `cours`, `groupe`, `telephone`, `adresse`) VALUES
 (1, 'Gaetan', 'Hecarim', 'Gaetinho', 'Homme', 'POO', 'M1 MIAGE', 767144587, '4 rue du lac d\'eau'),
-(2, 'Noureddine', 'Bekhdadi', 'nbnueve', 'Homme', 'Professionalisation', 'L2 MIASHS MIAGE', 123456789, '9 rue du maréchal Scopel');
+(2, 'Noureddine', 'Bekhdadi', 'nbnueve', 'Homme', 'Professionalisation', 'L2 MIASHS MIAGE', 123456789, '9 rue du maréchal Scopel'),
+(3, 'Zinedine', 'Zidane', 'zizou', 'Homme', 'anglais', 'M2 IHM', 75489641, '118 route de narbonne\n81300\nRoubaix');
 
 -- --------------------------------------------------------
 
@@ -87,7 +89,8 @@ CREATE TABLE `groupe` (
 INSERT INTO `groupe` (`idG`, `GNom`, `annee`) VALUES
 (2, 'M1 MIAGE', 2023),
 (3, 'L3MIAGE', 2021),
-(4, 'L2 MIASHS MIAGE', 2019);
+(4, 'L2 MIASHS MIAGE', 2019),
+(5, 'M2 IHM', 2023);
 
 -- --------------------------------------------------------
 
@@ -148,19 +151,19 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `cours`
 --
 ALTER TABLE `cours`
-  MODIFY `idC` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idC` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `enregistrement`
 --
 ALTER TABLE `enregistrement`
-  MODIFY `idE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `groupe`
 --
 ALTER TABLE `groupe`
-  MODIFY `idG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
