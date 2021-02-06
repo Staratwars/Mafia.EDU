@@ -67,7 +67,7 @@ Programmes/logiciels/resources que nous avons utilisé pour développer notre pr
 **Dernière version stable :** 5.0
 **Dernière version :** 5.1
 
-Liste des versions : [Cliquer pour afficher](https://github.com/your/projetL3/tags)
+Liste des versions : [Cliquer pour afficher](https://github.com/projetL3/tags)
 
 ## Auteurs
 * **Noureddine BEKHDADI** _alias_ [@staratwars](https://github.com/staratwars)
