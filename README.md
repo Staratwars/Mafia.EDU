@@ -1,4 +1,6 @@
-# projetL3
+# Suivi des étudiants dans une formation à la
+carte.
+L3 Miage, projet de programmation
 
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
