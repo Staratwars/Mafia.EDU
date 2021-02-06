@@ -9,7 +9,7 @@ parcours et saisir les enseignement validés.
 
 ## Pour commencer
 
-Une année universitaire est à cheval sur deux années civiles (par ex. 2020-2021). Elle est divisée en deux semestre : le semestre impair (début de l’année universitaire) et le semestre pair (fin de l’année universitaire)
+Une année universitaire est à cheval sur deux années civiles (2020-2021). Elle est divisée en deux semestre : le semestre impair (début de l’année universitaire) et le semestre pair (fin de l’année universitaire)
 
 Les formations sont organisées par mention puis sous-divisées en parcours (par exemple mention MIASHS
 parcours Miage).
@@ -64,12 +64,13 @@ Programmes/logiciels/resources que nous avons utilisé pour développer notre pr
 
 ## Versions
 
-**Dernière version stable :**
-**Dernière version :** 0.1
+**Dernière version stable :** Pas encore de release.
+**Dernière version :** Pas encore de release.
 
-Liste des versions : [Cliquer pour afficher](https://github.com/projetL3/tags)
+Liste des versions : [Cliquer pour afficher](https://github.com/projetL3/tags) 
 
 ## Auteurs
+
 * **Noureddine BEKHDADI** _alias_ [@staratwars](https://github.com/staratwars)
 * **Gaetan SCOPEL** _alias_ [@Jeaneyamarre](https://github.com/Jeaneyamarre)
 
