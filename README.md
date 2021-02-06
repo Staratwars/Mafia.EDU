@@ -1,5 +1,4 @@
-# Suivi des étudiants dans une formation à la
-carte.
+# Suivi des étudiants dans une formation à la carte.
 L3 Miage, projet de programmation
 
 
