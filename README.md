@@ -52,21 +52,21 @@ _exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [..
 
 ## Fabriqué avec
 
-Entrez les programmes/logiciels/resources que vous avez utilisé pour développer votre projet
+Programmes/logiciels/resources que nous avons utilisé pour développer notre projet :
 
-_exemples :_
 * [Netbeans 8.2](https://netbeans.org/downloads/8.2/rc/) 
 * [SQL Connector Java ](https://dev.mysql.com/downloads/connector/j/) - Connexion entre le code et notre base de donnée.
 * [GIT & GITHUB](https://github.com/) - Travail collaboratif
+* [PHPMyAdmin](https://www.phpmyadmin.net/) - Base de donnée
 
 
 
 
 ## Versions
-Listez les versions ici 
-_exemple :_
+
 **Dernière version stable :** 5.0
 **Dernière version :** 5.1
+
 Liste des versions : [Cliquer pour afficher](https://github.com/your/projetL3/tags)
 
 ## Auteurs
