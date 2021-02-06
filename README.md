@@ -1,4 +1,4 @@
-#  ![](http://url/to/img.png)  Mafia.EDU : Suivi des étudiants dans une formation à la carte. 
+#  ![](https://www.clipartmax.com/png/middle/121-1219396_godfather-icon-godfather-hand-logo-png.png)  Mafia.EDU : Suivi des étudiants dans une formation à la carte. 
 L3 Miage, projet de programmation
 
 
