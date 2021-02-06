@@ -29,9 +29,9 @@
               <Component id="ButtonCours" min="-2" pref="166" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
               <Component id="ButtonGroupe" min="-2" pref="145" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-              <Component id="ButtonEnreg" min="-2" pref="154" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+              <Component id="ButtonEnreg" min="-2" pref="264" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -65,12 +65,19 @@
                   <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="99" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel4" min="-2" pref="64" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel1" alignment="1" pref="136" max="32767" attributes="0"/>
+              <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="jLabel4" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace pref="73" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -86,6 +93,14 @@
             <Property name="text" type="java.lang.String" value="Accueil"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Prototype"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="ButtonCours">
@@ -93,7 +108,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="COURS"/>
+        <Property name="text" type="java.lang.String" value="INSCRIPTION"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="ButtonGroupe">
@@ -101,7 +116,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="GROUPE"/>
+        <Property name="text" type="java.lang.String" value="PARCOURS"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="ButtonEnreg">
@@ -109,7 +124,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ENREGISTREMENT"/>
+        <Property name="text" type="java.lang.String" value="ENREGISTREMENT ENSEIGNEMENT"/>
       </Properties>
     </Component>
   </SubComponents>
