@@ -55,8 +55,10 @@ _exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [..
 Entrez les programmes/logiciels/resources que vous avez utilisé pour développer votre projet
 
 _exemples :_
-* [Netbeans 8.2](http://materializecss.com) - Framework CSS (front-end)
-* [Atom](https://atom.io/) - Editeur de textes
+* [Netbeans 8.2](https://netbeans.org/downloads/8.2/rc/) 
+* [SQL Connector Java ](https://dev.mysql.com/downloads/connector/j/) - Connexion entre le code et notre base de donnée.
+* [GIT & GITHUB]
+
 
 ## Contributing
 
