@@ -37,11 +37,10 @@ Etudiant
 
 ### Installation
 
-Etapes pour installer le programme....
-
-
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
-
+- Telecharger XAMP
+- Ouvrir Apache & MySql
+- Se rendre sur PHPMyAdmin pour accéder à la BD
+- Ouvrir le .jar
 
 
 ## Fabriqué avec
