@@ -1,4 +1,4 @@
-# Suivi des étudiants dans une formation à la carte.
+# Mafia.EDU : Suivi des étudiants dans une formation à la carte.
 L3 Miage, projet de programmation
 
 
