@@ -57,30 +57,23 @@ Entrez les programmes/logiciels/resources que vous avez utilisé pour développe
 _exemples :_
 * [Netbeans 8.2](https://netbeans.org/downloads/8.2/rc/) 
 * [SQL Connector Java ](https://dev.mysql.com/downloads/connector/j/) - Connexion entre le code et notre base de donnée.
-* [GIT & GITHUB]
+* [GIT & GITHUB](https://github.com/) - Travail collaboratif
 
 
-## Contributing
 
-Si vous souhaitez contribuer, lisez le fichier [CONTRIBUTING.md](https://example.org) pour savoir comment le faire.
 
 ## Versions
 Listez les versions ici 
 _exemple :_
 **Dernière version stable :** 5.0
 **Dernière version :** 5.1
-Liste des versions : [Cliquer pour afficher](https://github.com/your/project-name/tags)
-_(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
+Liste des versions : [Cliquer pour afficher](https://github.com/your/projetL3/tags)
 
 ## Auteurs
-Listez le(s) auteur(s) du projet ici !
-* **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
+* **Noureddine BEKHDADI** _alias_ [@staratwars](https://github.com/staratwars)
+* **Gaetan SCOPEL** _alias_ [@Jeaneyamarre](https://github.com/Jeaneyamarre)
 
-Lisez la liste des [contributeurs](https://github.com/your/project/contributors) pour voir qui à aidé au projet !
 
-_(pour le lien mettez simplement l'URL de votre projet suivi de ``/contirubors``)_
 
-## License
 
-Ce projet est sous licence ``exemple: WTFTPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
 
