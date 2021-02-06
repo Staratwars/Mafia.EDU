@@ -67,7 +67,7 @@ Programmes/logiciels/resources que nous avons utilisé pour développer notre pr
 **Dernière version stable :** Pas encore de release.
 **Dernière version :** Pas encore de release.
 
-Liste des versions : [Cliquer pour afficher](https://github.com/projetL3/tags) 
+Liste des versions : [Cliquer pour afficher](https://github.com/mafia.EDU/tags) 
 
 ## Auteurs
 
