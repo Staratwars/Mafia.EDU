@@ -9,29 +9,23 @@ parcours et saisir les enseignement validés.
 
 ## Pour commencer
 
-Une année universitaire est à cheval sur deux années civiles (2020-2021). Elle est divisée en deux semestre : le semestre impair (début de l’année universitaire) et le semestre pair (fin de l’année universitaire)
+Fonctionnalité :
 
-Les formations sont organisées par mention puis sous-divisées en parcours (par exemple mention MIASHS
-parcours Miage).
+Inscrire un étudiant à un enseignement
+voir parcours d’un étudiant 
+ajouter enseignement validés
 
-Les Unités d’Enseignement (UE) sont les cours proposés par les différentes mentions. Chaque UE est associée
-à une mention, à l’exception de certaines UE qui sont des UE d’ouverture. Une UE possède un code d’identification
-et rapporte des crédits ECT (3 ou 6).
+1 annee universitaire : 2020-2021 avec 2 Semestre : pair (début) &impair (fin)
 
-Dans une formation à la carte, toutes les UE ont potentiellement un ou des prérequis qui sont d’autres UE et
-qui doivent être validées antérieurement (par exemple on peut imaginer que pour suivre “Prog Objet 2” il faut avoir
-validé “algorithmique” et “Prog Objet 1”). Les UE qui n’ont pas de prérequis peuvent être choisies dès l’arrivée en
-première année.
+Formations et UE :
+1 formation : 1 mention & plusieurs parcours ( mention MIASHS parcours MIAGE)
+Chaque cours possède des UE lié à des mentions
+1 UE : crédits ECTS & codeUE
+Faire des prérequis : devoir faire algo pour faire poo par ex, vérifier si UE faite avant inscription à une autre UE
+UE sans prérequis : semestre pair
 
-Un étudiant est défini par son numéro d’étudiant. Il possède un prénom et un nom et il est inscrit à un parcours
-d’une mention.
+Etudiant
 
-Il faut effectuer le suivi pour chaque étudiants des UE qu’il a suivies, en quelle année universitaire il a validé
-cette UE ainsi que le semetre (pair ou impair) où cette validation a eu lieu. Il faut de plus mémoriser si l’étudiant à
-validé ou non l’UE à l’issue de ce semestre. Par exemple un étudiant peut suivre une UE et échouer sur le semestre
-pair de 2020-2021 puis suivre et valider l’UE le semestre impair de 2021-2022.
-
-Il faut également suivre les UE auxquelles l’étudiant est inscrit pour le semestre en cours
 
 ### Pré-requis
 
