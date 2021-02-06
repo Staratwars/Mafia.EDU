@@ -72,13 +72,28 @@ public class Main extends javax.swing.JFrame {
         );
 
         ButtonCours.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonCours.setText("INSCRIPTION");
+        ButtonCours.setText("COURS");
+        ButtonCours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCoursActionPerformed(evt);
+            }
+        });
 
         ButtonGroupe.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonGroupe.setText("PARCOURS");
+        ButtonGroupe.setText("GROUPE");
+        ButtonGroupe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonGroupeActionPerformed(evt);
+            }
+        });
 
         ButtonEnreg.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonEnreg.setText("ENREGISTREMENT ENSEIGNEMENT");
+        ButtonEnreg.setText("ENREGISTREMENT");
+        ButtonEnreg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonEnregActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,6 +124,26 @@ public class Main extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonEnregActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEnregActionPerformed
+        // TODO add your handling code here:
+        Enregistrement e = new Enregistrement();/** nouvel objet cours a afficher **/
+        e.setVisible(true);
+        
+    }//GEN-LAST:event_ButtonEnregActionPerformed
+
+    private void ButtonCoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCoursActionPerformed
+        // TODO add your handling code here:
+        Cours c = new Cours();/** nouvel objet cours a afficher **/
+        c.setVisible(true);
+        
+    }//GEN-LAST:event_ButtonCoursActionPerformed
+
+    private void ButtonGroupeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonGroupeActionPerformed
+        // TODO add your handling code here:
+        Groupe g = new Groupe();/** nouvel objet cours a afficher **/
+        g.setVisible(true);
+    }//GEN-LAST:event_ButtonGroupeActionPerformed
 
     /**
      * @param args the command line arguments

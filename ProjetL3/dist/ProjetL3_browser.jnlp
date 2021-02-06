@@ -8,11 +8,11 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProjetL3.jar" size="29014" download="eager" />
+    <jar href="ProjetL3.jar" size="38754" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.49-bin.jar" size="1006906" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.49.jar" size="1006904" download="eager" />
   </resources>
-  <applet-desc  width="800" height="600" main-class="EtudiantGestion.Cours"  name="ProjetL3" >
+  <applet-desc  width="800" height="600" main-class="EtudiantGestion.Main"  name="ProjetL3" >
   </applet-desc>
   <update check="always"/>
 </jnlp>
