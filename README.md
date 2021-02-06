@@ -35,10 +35,10 @@ Il faut également suivre les UE auxquelles l’étudiant est inscrit pour le se
 
 ### Pré-requis
 
-— des fichiers de données permettant de tester extensivement les fonctionnalités de l’application.
-— la javadoc de l'application
-— un diagramme de classes.
-— un fichier .jar permettant le déploiement de l’application.
+- des fichiers de données permettant de tester extensivement les fonctionnalités de l’application.
+- la javadoc de l'application
+- un diagramme de classes.
+- un fichier .jar permettant le déploiement de l’application.
 - le MCD 
 
 ### Installation
