@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author ASUS
  */
-public class Cours extends javax.swing.JFrame {
+public class CreerFormation extends javax.swing.JFrame {
 
     /**
      * Creates new form Groupe
@@ -26,7 +26,7 @@ public class Cours extends javax.swing.JFrame {
     
     Connection con; //connexion
     PreparedStatement pst; //etat
-    public Cours() {
+    public CreerFormation() {
         initComponents();
         jButton1.setBackground(Color.DARK_GRAY);
         jButton2.setBackground(Color.DARK_GRAY);
@@ -64,7 +64,7 @@ public class Cours extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("UE");
+        jLabel1.setText("Cours");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("PrototypeC");
@@ -104,7 +104,7 @@ public class Cours extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Nom UE");
+        jLabel2.setText("Nom Cours");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Durée");
@@ -227,9 +227,9 @@ public class Cours extends javax.swing.JFrame {
             
 
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Cours.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CreerFormation.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Cours.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CreerFormation.class.getName()).log(Level.SEVERE, null, ex);
         }
        
         
@@ -261,21 +261,23 @@ public class Cours extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cours.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreerFormation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cours.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreerFormation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cours.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreerFormation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cours.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreerFormation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cours().setVisible(true);
+                new CreerFormation().setVisible(true);
             }
         });
     }
