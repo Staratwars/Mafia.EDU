@@ -49,6 +49,7 @@ Pouvoir filtrer par mention &parcours, voir les UE d’ouverture.
 "Secretariat Pedagogique”. Accès à la liste d’étudiant, la sélection d’un étudiant et affiche la liste des UE dont l’étudiant a les prérequis. Pouvoir filtrer & trier la liste.
 
 **Saisie des résultats:**
+
 "Bureau des examens”. Donne accès à la liste des UE triable et filtrable, sélectionner une UE donne la liste des étudiants inscrits, avec possibilité de cocher si l’UE est validée.
 
 
