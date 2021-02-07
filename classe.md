@@ -6,6 +6,7 @@
 - Enregistrement : enregistrer un étudiant
 - InscrFor : inscrire un étudiant à une formation
 - InscrUe : inscrire un étudiant à une UE à la carte
+- CreerFormation : Creer une formation.
 
 - AfficheNote : Affiche les notes de l'étudiant
 
