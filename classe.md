@@ -5,7 +5,7 @@
 - Cours : ajouter cours selon Nom, Durée, ECTS
 - Enregistrement : enregistrer un étudiant
 - InscrCours : inscrire un étudiant à une UE
-
+- AfficheNote : Affiche les notes de l'étudiant&
 
 # Classe unique :
 
