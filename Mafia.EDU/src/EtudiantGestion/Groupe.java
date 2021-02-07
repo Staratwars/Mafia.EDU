@@ -55,9 +55,11 @@ public class Groupe extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtGroupe = new javax.swing.JTextField();
+        txtF = new javax.swing.JTextField();
         txtAnnee = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -73,6 +75,12 @@ public class Groupe extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Prototype");
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EtudiantGestion/redimIcon.jpg"))); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("MAFIA.EDU");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -80,20 +88,31 @@ public class Groupe extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(712, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(20, 20, 20))
+                .addContainerGap(633, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addGap(13, 13, 13)
-                .addComponent(jLabel1)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -135,7 +154,7 @@ public class Groupe extends javax.swing.JFrame {
                         .addComponent(jLabel3)))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtGroupe, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                    .addComponent(txtF, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
                     .addComponent(txtAnnee))
                 .addGap(136, 136, 136)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -150,7 +169,7 @@ public class Groupe extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtGroupe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -188,24 +207,24 @@ public class Groupe extends javax.swing.JFrame {
         // TODO add your handling code here:
         /** ajouter a la database, le groupe avec la table groupe sur mySQL **/
         
-        String groupeNom = txtGroupe.getText();
+        String nomf = txtF.getText();
         String annee = txtAnnee.getText();
            
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
-            pst = con.prepareStatement("insert into groupe(Gnom, annee)values(?,?)");
+            pst = con.prepareStatement("insert into formation(nomf, annee)values(?,?)");
                 /** creer etat et donne a la BD . variables sont  "?"  **/
                 
                 /**donner valeurs dans la BD **/
-                pst.setString(1, groupeNom);
+                pst.setString(1, nomf);
                 pst.setString(2, annee);
 
                 
 
                 pst.executeUpdate(); //inserer dans la database 
-                JOptionPane.showMessageDialog(null, "Enregistrement du groupe effectué...");
+                JOptionPane.showMessageDialog(null, "Enregistrement de la formation effectué...");
 
                 
             
@@ -236,7 +255,7 @@ public class Groupe extends javax.swing.JFrame {
                                 } 
                          try(BufferedWriter b = new BufferedWriter(new FileWriter(file,true) ))
                 {  
-                        groupeclass g1 = new groupeclass(txtGroupe.getText(),txtAnnee.getText());
+                        groupeclass g1 = new groupeclass(txtF.getText(),txtAnnee.getText());
                                      
                                 /** Ajoute le nouveau groupe à la suite dans le fichier **/
                                 b.write('"'+String.valueOf(compteur)+'"');
@@ -262,9 +281,9 @@ public class Groupe extends javax.swing.JFrame {
       }
        
         
-                txtGroupe.setText("");
+                txtF.setText("");
                 txtAnnee.setText("");
-                txtGroupe.requestFocus();
+                txtF.requestFocus();
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -316,13 +335,15 @@ public class Groupe extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtAnnee;
-    private javax.swing.JTextField txtGroupe;
+    private javax.swing.JTextField txtF;
     // End of variables declaration//GEN-END:variables
 
     private void While(boolean b) {

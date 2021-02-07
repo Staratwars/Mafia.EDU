@@ -8,12 +8,12 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Mafia.EDU.jar" size="41444" download="eager" />
+    <jar href="Mafia.EDU.jar" size="47886" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.49-bin.jar" size="1006906" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.49.jar" size="1006904" download="eager" />
     <jar href="lib\opencsv-5.3.jar" size="218373" download="eager" />
   </resources>
-  <application-desc main-class="EtudiantGestion.Login"  name="Mafia.EDU" >
+  <application-desc main-class="EtudiantGestion.Groupe"  name="Mafia.EDU" >
   </application-desc>
   <update check="always"/>
 </jnlp>
