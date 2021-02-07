@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 06 fév. 2021 à 18:35
--- Version du serveur :  10.4.17-MariaDB
--- Version de PHP : 8.0.1
+-- Généré le :  Dim 07 fév. 2021 à 21:23
+-- Version du serveur :  10.1.36-MariaDB
+-- Version de PHP :  7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,79 +19,65 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `gestionetudiant`
+-- Base de données :  `gestionetudiant`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cours`
+-- Structure de la table `etudiant`
 --
 
-CREATE TABLE `cours` (
-  `idC` int(255) NOT NULL,
-  `nomCours` varchar(255) NOT NULL,
-  `duree` int(11) NOT NULL,
-  `optionC` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `cours`
---
-
-INSERT INTO `cours` (`idC`, `nomCours`, `duree`, `optionC`) VALUES
-(1, 'POO', 3, 'Semaine'),
-(2, 'Professionalisation', 6, 'Semaine'),
-(3, 'anglais', 3, 'Mois');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `enregistrement`
---
-
-CREATE TABLE `enregistrement` (
+CREATE TABLE `etudiant` (
   `idE` int(11) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
-  `nic` varchar(255) NOT NULL,
   `sexe` varchar(255) NOT NULL,
-  `cours` varchar(255) NOT NULL,
-  `groupe` varchar(255) NOT NULL,
-  `telephone` int(11) NOT NULL,
-  `adresse` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `enregistrement`
---
-
-INSERT INTO `enregistrement` (`idE`, `prenom`, `nom`, `nic`, `sexe`, `cours`, `groupe`, `telephone`, `adresse`) VALUES
-(1, 'Gaetan', 'Hecarim', 'Gaetinho', 'Homme', 'POO', 'M1 MIAGE', 767144587, '4 rue du lac d\'eau'),
-(2, 'Noureddine', 'Bekhdadi', 'nbnueve', 'Homme', 'Professionalisation', 'L2 MIASHS MIAGE', 123456789, '9 rue du maréchal Scopel'),
-(3, 'Zinedine', 'Zidane', 'zizou', 'Homme', 'anglais', 'M2 IHM', 75489641, '118 route de narbonne\n81300\nRoubaix');
+  `tel` int(11) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `idf` int(11) DEFAULT NULL,
+  `nomf` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `groupe`
+-- Structure de la table `formation`
 --
 
-CREATE TABLE `groupe` (
-  `idG` int(11) NOT NULL,
-  `GNom` varchar(255) NOT NULL,
+CREATE TABLE `formation` (
+  `idF` int(11) NOT NULL,
+  `nomf` varchar(255) NOT NULL,
+  `parcours` varchar(255) NOT NULL,
   `annee` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
--- Déchargement des données de la table `groupe`
+-- Structure de la table `ue`
 --
 
-INSERT INTO `groupe` (`idG`, `GNom`, `annee`) VALUES
-(2, 'M1 MIAGE', 2023),
-(3, 'L3MIAGE', 2021),
-(4, 'L2 MIASHS MIAGE', 2019),
-(5, 'M2 IHM', 2023);
+CREATE TABLE `ue` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `duréeh` int(11) NOT NULL,
+  `ECTS` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `uevalide`
+--
+
+CREATE TABLE `uevalide` (
+  `validation` tinyint(1) NOT NULL,
+  `note` int(11) NOT NULL,
+  `idUe` int(11) NOT NULL,
+  `idE` int(11) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -120,22 +107,31 @@ INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `motdepasse`, `utype`, `Userna
 --
 
 --
--- Index pour la table `cours`
+-- Index pour la table `etudiant`
 --
-ALTER TABLE `cours`
-  ADD PRIMARY KEY (`idC`);
+ALTER TABLE `etudiant`
+  ADD PRIMARY KEY (`idE`),
+  ADD KEY `fk_idf` (`idf`);
 
 --
--- Index pour la table `enregistrement`
+-- Index pour la table `formation`
 --
-ALTER TABLE `enregistrement`
-  ADD PRIMARY KEY (`idE`);
+ALTER TABLE `formation`
+  ADD PRIMARY KEY (`idF`);
 
 --
--- Index pour la table `groupe`
+-- Index pour la table `ue`
 --
-ALTER TABLE `groupe`
-  ADD PRIMARY KEY (`idG`);
+ALTER TABLE `ue`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `uevalide`
+--
+ALTER TABLE `uevalide`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_ide` (`idE`),
+  ADD KEY `fk_idue` (`idUe`);
 
 --
 -- Index pour la table `utilisateur`
@@ -148,28 +144,51 @@ ALTER TABLE `utilisateur`
 --
 
 --
--- AUTO_INCREMENT pour la table `cours`
+-- AUTO_INCREMENT pour la table `etudiant`
 --
-ALTER TABLE `cours`
-  MODIFY `idC` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `etudiant`
+  MODIFY `idE` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `enregistrement`
+-- AUTO_INCREMENT pour la table `formation`
 --
-ALTER TABLE `enregistrement`
-  MODIFY `idE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `formation`
+  MODIFY `idF` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `groupe`
+-- AUTO_INCREMENT pour la table `ue`
 --
-ALTER TABLE `groupe`
-  MODIFY `idG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `ue`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `uevalide`
+--
+ALTER TABLE `uevalide`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `etudiant`
+--
+ALTER TABLE `etudiant`
+  ADD CONSTRAINT `fk_idf` FOREIGN KEY (`idf`) REFERENCES `formation` (`idF`);
+
+--
+-- Contraintes pour la table `uevalide`
+--
+ALTER TABLE `uevalide`
+  ADD CONSTRAINT `fk_ide` FOREIGN KEY (`idE`) REFERENCES `etudiant` (`idE`),
+  ADD CONSTRAINT `fk_idue` FOREIGN KEY (`idUe`) REFERENCES `ue` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
