@@ -130,8 +130,18 @@ public class ListeUE extends javax.swing.JFrame {
         });
 
         jButton2.setText("EDITER");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("SUPPRIMER");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -190,6 +200,11 @@ public class ListeUE extends javax.swing.JFrame {
                 "idUE", "nomUE", "dureeUE", "ECTS"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -313,6 +328,121 @@ public class ListeUE extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        // TODO add your handling code here:
+        /** Clique sur ligne **/
+        DefaultTableModel Df = (DefaultTableModel) jTable2.getModel(); /** recup la table **/
+        int selectedIndex = jTable2.getSelectedRow();
+        
+        txtNom.setText(Df.getValueAt(selectedIndex, 1).toString()); /** 0 =1ere colonne,on  prennd la 2,3,4 et on prend en compte le clique sur le champs
+         * afin de modifier avec bouton EDIT
+         * 
+         */
+        txtECTS.setText(Df.getValueAt(selectedIndex, 2).toString());
+        txtDuree.setText(Df.getValueAt(selectedIndex, 3).toString());
+        
+        
+       
+        
+        
+
+        
+        
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel Df = (DefaultTableModel) jTable2.getModel(); /** recup la table **/
+        int selectedIndex = jTable2.getSelectedRow(); 
+        
+         try {
+             
+             int id = Integer.parseInt(Df.getValueAt(selectedIndex,0).toString()); /** recup depûis la table l'id, on renvoie un entier **/
+             String nom = txtNom.getText();
+             String duree = txtDuree.getText();
+             String ECTS = txtECTS.getText();
+
+             
+             
+             
+             
+             
+            Class.forName("com.mysql.jdbc.Driver");
+            con1 = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
+            insert = con1.prepareStatement("update ue set nom=?, dureeh=?,ECTS=? where id=?");
+            insert.setString(1,nom);
+            insert.setString(2,duree);
+            insert.setString(3,ECTS);
+            insert.setInt(4,id);
+          
+            insert.executeUpdate();
+            
+            JOptionPane.showMessageDialog(this,"UE updaté dans la BD.");
+            table_update();
+               
+            
+            txtNom.setText("");
+            txtDuree.setText("");
+            txtECTS.setText(""); 
+
+            txtNom.requestFocus();
+
+            
+
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ListeUE.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ListeUE.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        /** DELETE bouton ligne **/
+        DefaultTableModel Df = (DefaultTableModel) jTable2.getModel(); /** recup la table **/
+        int selectedIndex = jTable2.getSelectedRow();   
+        try {
+             
+             int id = Integer.parseInt(Df.getValueAt(selectedIndex,0).toString()); /** recup depûis la table l'id, on renvoie un entier **/
+             
+             int dialogResult = JOptionPane.showConfirmDialog(null,"voulez-vous vraiment supprimer l'UE?","Attention",JOptionPane.YES_NO_OPTION); //afficher msg confirmation
+             
+             if( dialogResult == JOptionPane.YES_OPTION){
+                Class.forName("com.mysql.jdbc.Driver");
+                con1 = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
+                insert = con1.prepareStatement("delete from ue where id=?");
+                
+  
+                insert.setInt(1,id);
+                insert.executeUpdate();
+            
+                JOptionPane.showMessageDialog(this,"UE supprimé dans la BD.");
+                table_update();
+               
+            
+                txtNom.setText("");
+                txtDuree.setText("");
+                txtECTS.setText(""); 
+
+                txtNom.requestFocus();
+
+             }
+
+
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ListeUE.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ListeUE.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
