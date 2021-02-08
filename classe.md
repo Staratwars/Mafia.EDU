@@ -2,6 +2,7 @@
 # Mafia.EDU : Classe et JFrame Form :
 
 - Login : connexion utilisateur
+- NouveauUser : inscription utilisateur
 - Cours : ajouter cours selon Nom, Durée, ECTS
 - Enregistrement : enregistrer un étudiant
 - InscrFor : inscrire un étudiant à une formation
