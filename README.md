@@ -75,9 +75,9 @@ Pouvoir filtrer par mention &parcours, voir les UE d’ouverture.
 Programmes/logiciels/resources que nous avons utilisé pour développer notre projet :
 
 * [Netbeans 8.2](https://netbeans.org/downloads/8.2/rc/) 
-* [SQL Connector Java ](https://dev.mysql.com/downloads/connector/j/) - Connexion entre le code et notre base de donnée.
+* [SQL Connector Java ](https://dev.mysql.com/downloads/connector/j/) - Connexion entre le code et notre base de données.
 * [GIT & GITHUB](https://github.com/) - Travail collaboratif
-* [PHPMyAdmin](https://www.phpmyadmin.net/) - Base de donnée
+* [PHPMyAdmin](https://www.phpmyadmin.net/) - Base de données
 
 
 
