@@ -92,7 +92,8 @@ Liste des versions : [Cliquer pour afficher](https://github.com/mafia.EDU/tags)
 
 * **Noureddine BEKHDADI** _alias_ [@staratwars](https://github.com/staratwars)
 * **Gaetan SCOPEL** _alias_ [@Jeaneyamarre](https://github.com/Jeaneyamarre)
-* **Titouan LACROIX** _alias [@Turboroustinator](https://github.com/Turboroustinator)
+* **Titouan LACROIX** _alias_ [@Turboroustinator](https://github.com/Turboroustinator)
+* **Vinh Phung** _alias_ [@VinhPhung123](https://github.com/VinhPhung123)
 
 
 
