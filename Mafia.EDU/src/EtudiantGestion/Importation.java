@@ -54,32 +54,12 @@ public class Importation extends javax.swing.JFrame {
         jLabel1.setText("Importation fichier CSV");
 
         jButton2.setText("Importer ETUDIANT");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         jButton3.setText("Importer UE");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jButton4.setText("Importer UEVALIDE");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
 
         jButton5.setText("Importer UTILISATEUR");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,12 +71,12 @@ public class Importation extends javax.swing.JFrame {
                 .addGap(118, 118, 118))
             .addGroup(layout.createSequentialGroup()
                 .addGap(110, 110, 110)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -119,7 +99,7 @@ public class Importation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    Connection con; //connexion
+Connection con; //connexion
     PreparedStatement pst; //etat
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 JFileChooser fc = new JFileChooser();
@@ -166,168 +146,6 @@ JFileChooser fc = new JFileChooser();
        
     
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        JFileChooser fc = new JFileChooser();
-    /* affichage du dialog et test si le bouton ok est pressé */
-    if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
-
-        String nomFichierOuvert = fc.getSelectedFile().getName();
-        //String path = fc.getSelectedFile().getAbsolutePath();
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            con = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
-            /* demande au système d'ouvrir le fichier précédemment séléctionné*/
-
-            String query = " LOAD DATA INFILE '"+nomFichierOuvert+"' INTO TABLE etudiant " + " FIELDS TERMINATED BY ';' " + " LINES TERMINATED BY '\n'(prenom,nom,sexe,tel,mail,idf,nomf)";
-
-
-            ResultSet results;
-
-
-            try{
-
-            Statement stmt = con.createStatement();
-
-            results = stmt.executeQuery(query);
-
-            stmt.close();
-            }
-
-            catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-            }
-
-    }
-    catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-                }
-    }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-             JFileChooser fc = new JFileChooser();
-    /* affichage du dialog et test si le bouton ok est pressé */
-    if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
-
-        String nomFichierOuvert = fc.getSelectedFile().getName();
-        //String path = fc.getSelectedFile().getAbsolutePath();
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            con = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
-            /* demande au système d'ouvrir le fichier précédemment séléctionné*/
-
-            String query = " LOAD DATA INFILE '"+nomFichierOuvert+"' INTO TABLE ue " + " FIELDS TERMINATED BY ';' " + " LINES TERMINATED BY '\n'(nom,dureeh,ECTS)";
-
-
-            ResultSet results;
-
-
-            try{
-
-            Statement stmt = con.createStatement();
-
-            results = stmt.executeQuery(query);
-
-            stmt.close();
-            }
-
-            catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-            }
-
-    }
-    catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-                }
-    }
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-    JFileChooser fc = new JFileChooser();
-    /* affichage du dialog et test si le bouton ok est pressé */
-    if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
-
-        String nomFichierOuvert = fc.getSelectedFile().getName();
-        //String path = fc.getSelectedFile().getAbsolutePath();
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            con = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
-            /* demande au système d'ouvrir le fichier précédemment séléctionné*/
-
-            String query = " LOAD DATA INFILE '"+nomFichierOuvert+"' INTO TABLE uevalide " + " FIELDS TERMINATED BY ';' " + " LINES TERMINATED BY '\n'(validation,note,idUe,idE,semestre,anneU)";
-
-
-            ResultSet results;
-
-
-            try{
-
-            Statement stmt = con.createStatement();
-
-            results = stmt.executeQuery(query);
-
-            stmt.close();
-            }
-
-            catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-            }
-
-    }
-    catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-                }
-    }
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-          JFileChooser fc = new JFileChooser();
-    /* affichage du dialog et test si le bouton ok est pressé */
-    if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
-
-        String nomFichierOuvert = fc.getSelectedFile().getName();
-        //String path = fc.getSelectedFile().getAbsolutePath();
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            con = DriverManager.getConnection("jdbc:mysql://localhost/gestionetudiant","root",""); //mdp de base vide (blck)
-            /* demande au système d'ouvrir le fichier précédemment séléctionné*/
-
-            String query = " LOAD DATA INFILE '"+nomFichierOuvert+"' INTO TABLE utilisateur " + " FIELDS TERMINATED BY ';' " + " LINES TERMINATED BY '\n'(nom,prenom,motdepasse,utype,Username)";
-
-
-            ResultSet results;
-
-
-            try{
-
-            Statement stmt = con.createStatement();
-
-            results = stmt.executeQuery(query);
-
-            stmt.close();
-            }
-
-            catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-            }
-
-    }
-    catch(Exception e){
-            System.out.println("exception due à la requête"+e);
-                }
-    }
-    }//GEN-LAST:event_jButton5ActionPerformed
                
        
     
